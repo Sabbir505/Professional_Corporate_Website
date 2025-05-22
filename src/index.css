@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 221 85% 40%;
+    --primary-light: 221 85% 50%;
+    --primary-dark: 221 85% 30%;
+    
+    --secondary: 184 100% 33%;
+    --secondary-light: 184 100% 43%;
+    --secondary-dark: 184 100% 23%;
+    
+    --accent: 40 100% 50%;
+    --accent-light: 40 100% 60%;
+    --accent-dark: 40 100% 40%;
+    
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 91% 58%;
+    
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md shadow-sm transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-dark text-white font-medium py-2 px-4 rounded-md shadow-sm transition-colors duration-200;
+  }
+  
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 px-4 rounded-md shadow-sm transition-all duration-200;
+  }
+}
